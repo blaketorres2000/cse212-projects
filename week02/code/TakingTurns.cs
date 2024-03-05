@@ -16,6 +16,14 @@
         while (players.Length > 0)
             players.GetNextPerson();
         // Defect(s) Found: 
+        // 1. The current code simply lists the name of the person however many times they are in the queue.  
+        // The requirement is to list the name of the person and then place them back in the queue.  
+        // This is a circular queue.  The current code does not do this.  The code should be modified to 
+        // place the person back in the queue after they are displayed.  The number of turns should be 
+        // decremented by 1 each time the person is displayed.  If the number of turns is 0 or less, then 
+        // the person should not be placed back in the queue.  The code should be modified to do this.
+        // 2. The code lists the names in reverse order.
+
 
         Console.WriteLine("---------");
 
@@ -39,6 +47,9 @@
             players.GetNextPerson();
 
         // Defect(s) Found: 
+        // 1. The current code does the same thing as in Test 1.  The code should be modified to place the 
+        // person back in the queue after they are displayed.  The number of turns should be decremented by 1.
+        // 2. The code lists the names in reverse order.
 
         Console.WriteLine("---------");
 
@@ -57,6 +68,9 @@
             // Console.WriteLine(players);
         }
         // Defect(s) Found: 
+        // 1. The code lists the names in reverse order.
+        // 2. The code lists the name of the person however many times they are in the queue, and once for Tim.
+        // 3. Because it processes through the code 10 times, it lists "No one in the queue" 4 times.
 
         Console.WriteLine("---------");
 
@@ -74,6 +88,9 @@
             // Console.WriteLine(players);
         }
         // Defect(s) Found: 
+        // 1. The code lists the names in reverse order.
+        // 2. The code lists the name of the person however many times they are in the queue, and once for Tim.
+        // 3. Because it processes through the code 10 times, it lists "No one in the queue" 6 times.
 
         Console.WriteLine("---------");
 
@@ -84,5 +101,6 @@
         players = new TakingTurnsQueue();
         players.GetNextPerson();
         // Defect(s) Found:
+        // 1. No defects found.  The code works as expected. It displays "No one in the queue."
     }
 }
